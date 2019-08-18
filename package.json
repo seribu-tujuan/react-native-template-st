@@ -1,0 +1,24 @@
+{
+  "name": "react-native-template-st",
+  "version": "0.0.1",
+  "description": "Base React Native template used in Seribu Tujuan projects.",
+  "scripts": {
+    "install": "node cleanup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nictar/react-native-st-template"
+  },
+  "keywords": [
+    "react-native",
+    "seribu-tujuan",
+    "template",
+    "boilerplate"
+  ],
+  "author": "Nico Dinata <ncdnt@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nictar/react-native-st-template/issues"
+  },
+  "homepage": "https://github.com/nictar/react-native-st-template"
+}
