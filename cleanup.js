@@ -1,20 +1,33 @@
 const fs = require('fs');
 const path = require('path');
 
-const projectFilesToDelete = ['App.js']
-const templateFilesToDelete = ['cleanup.js']
+const projectPath = path.join(__dirname, '..', '..');
 
-const deleteFile = filePath => {
+// delete unnecessary project and template files
+const projectFilesToDelete = ['App.js'];
+const templateFilesToDelete = [
+  'cleanup.js',
+  'LICENSE',
+  'README.md',
+  'MainActivity.java',
+  'setupNavigation.js',
+];
+
+const deleteFile = (filePath) => {
   if (!fs.existsSync(filePath)) {
-    return
+    return;
   }
 
-  fs.unlinkSync(filePath)
-}
+  fs.unlinkSync(filePath);
+};
 
-const projectPath = path.join(__dirname, '..', '..')
-const deleteProjectFile = fileName => deleteFile(path.join(projectPath, fileName))
-const deleteTemplateFile = fileName => deleteFile(path.join(__dirname, fileName))
+const deleteProjectFile = (fileName) => {
+  deleteFile(path.join(projectPath, fileName));
+};
 
-projectFilesToDelete.forEach(deleteProjectFile)
-templateFilesToDelete.forEach(deleteTemplateFile)
+const deleteTemplateFile = (fileName) => {
+  deleteFile(path.join(__dirname, fileName));
+};
+
+projectFilesToDelete.forEach(deleteProjectFile);
+templateFilesToDelete.forEach(deleteTemplateFile);
