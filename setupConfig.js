@@ -1,0 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+
+const projectPath = path.join(__dirname, '..', '..');
+const packageJsonPath = path.join(projectPath, 'package.json');
+const packageJsonFile = JSON.parse(fs.readFileSync(packageJsonPath), 'utf8');
+
+// add Prettier script to package.json
+const prettierScript = "prettier --config .prettierrc --write \"src/**/*.js\"";
+packageJsonFile.scripts.pretty = prettierScript;
+const packageJsonString = JSON.stringify(packageJsonFile, null, 2);
+fs.writeFileSync(packageJsonPath, packageJsonString);
