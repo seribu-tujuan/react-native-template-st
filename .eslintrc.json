@@ -40,7 +40,7 @@
     "no-else-return": ["off"]
   },
   "globals": {
-    "fetch": false,
-    "FormData": false
+    "fetch": "readonly",
+    "FormData": "readonly"
   }
 }
