@@ -10,5 +10,7 @@
   "eslint-plugin-react": "latest",
   "flow-bin": "0.92.1",
   "prettier": "latest",
-  "reactotron-react-native": "latest"
+  "reactotron-react-native": "latest",
+  "husky": "latest",
+  "lint-staged": "latest"
 }
