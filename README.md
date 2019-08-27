@@ -14,3 +14,6 @@ Dependencies installed with this template are:
 - Flow
 - Prettier
 - Reactotron React Native
+- Husky
+- Lint-staged
+
