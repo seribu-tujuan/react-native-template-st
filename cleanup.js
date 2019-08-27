@@ -11,6 +11,7 @@ const templateFilesToDelete = [
   'README.md',
   'MainActivity.java',
   'setupNavigation.js',
+  'setupConfig.js',
 ];
 
 const deleteFile = (filePath) => {
