@@ -1,9 +1,15 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const projectPath = path.join(__dirname, '..', '..');
 const packageJsonPath = path.join(projectPath, 'package.json');
 const packageJsonFile = JSON.parse(fs.readFileSync(packageJsonPath), 'utf8');
+
+// initialise git repo for the package
+// const templateGitPath = path.join(projectPath, '.git');
+// execSync(`rm -Rf ${templateGitPath} && git init ${projectPath}`);
+execSync(`git init ${projectPath}`);
 
 // add Prettier script to package.json
 const prettierScript =
@@ -21,12 +27,12 @@ packageJsonFile['husky'] = {
   },
 };
 packageJsonFile['lint-staged'] = {
-  "src/**/*.js": [
+  'src/**/*.js': [
     'prettier --config .prettierrc.json --write',
     'eslint',
     'git add',
-  ]
-}
+  ],
+};
 
 const packageJsonString = JSON.stringify(packageJsonFile, null, 2);
 fs.writeFileSync(packageJsonPath, packageJsonString);
