@@ -34,5 +34,11 @@ packageJsonFile['lint-staged'] = {
   ],
 };
 
+// set up directory to store custom fonts
+fs.mkdirSync(path.join(projectPath, 'assets/fonts'), { recursive: true });
+packageJsonFile['rnpm'] = {
+  assets: ['./assets/fonts/'],
+};
+
 const packageJsonString = JSON.stringify(packageJsonFile, null, 2);
 fs.writeFileSync(packageJsonPath, packageJsonString);
