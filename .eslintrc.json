@@ -9,6 +9,7 @@
     "react/jsx-one-expression-per-line": "off",
     "react/forbid-prop-types": ["off", { "forbid": [] }],
     "react/static-property-placement": ["error", "static public field"],
+    "react/jsx-wrap-multilines": ["error", { "prop": "ignore" }],
     "import/extensions": [
       "warn",
       "never",
