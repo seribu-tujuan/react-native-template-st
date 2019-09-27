@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-st",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Base React Native template used in Seribu Tujuan projects.",
   "scripts": {
     "install": "node setupConfig.js && node cleanup.js"
