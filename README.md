@@ -8,7 +8,6 @@
 Dependencies installed with this template are:
 - Axios
 - Day.js
-- React Navigation
 - Realm
 - ESLint
 - Flow
