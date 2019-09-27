@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Base React Native template used in Seribu Tujuan projects.",
   "scripts": {
-    "install": "node setupNavigation.js && node setupConfig.js && node cleanup.js"
+    "install": "node setupConfig.js && node cleanup.js"
   },
   "repository": {
     "type": "git",
